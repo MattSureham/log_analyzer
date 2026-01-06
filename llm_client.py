@@ -86,6 +86,25 @@ class HuggingFaceLLMClient(BaseLLMClient):
 
         return resp.json()[0]["generated_text"]
 
+
+# ---------- Fallback Wrapper ----------
+
+class FallbackLLMClient(BaseLLMClient):
+    def __init__(self, clients):
+        self.clients = clients
+
+    def chat(self, messages):
+        last_error = None
+
+        for client in self.clients:
+            try:
+                return client.chat(messages)
+            except Exception as e:
+                print(f"[WARN] LLM failed ({client.__class__.__name__}): {e}")
+                last_error = e
+
+        raise RuntimeError("All LLM backends failed") from last_error
+
 # ---------- Factory ----------
 
 def create_llm_client(name: str) -> BaseLLMClient:

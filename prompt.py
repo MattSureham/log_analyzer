@@ -1,3 +1,4 @@
+# import knowledge
 from rag import retrieve_context
 
 def build_prompt(log_text: str):

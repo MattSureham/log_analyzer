@@ -1,3 +1,4 @@
+# RAG
 def retrieve_context(log_text: str, kb_path="knowledge.txt", max_chunks=3):
     with open(kb_path, "r") as f:
         kb = f.read().split("\n\n")

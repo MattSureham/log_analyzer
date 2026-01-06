@@ -1,7 +1,7 @@
 
 ---
 
-## 1️⃣ `knowledge.txt` (example content)
+## knowledge (example content)
 
 ```txt
 ERROR: database connection refused
