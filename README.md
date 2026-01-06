@@ -1,9 +1,26 @@
 # LLM Log Analyzer
 
-Analyze application logs using multiple LLM backends (OpenAI, DeepSeek, Ollama, Hugging Face).
+A CLI tool that analyzes application logs using Large Language Models (LLMs), with
+support for multiple backends, fallback, and lightweight retrieval-augmented generation (RAG).
 
-## Usage
+---
+
+## Features
+
+- Analyze logs using LLMs
+- Multiple LLM backends:
+  - Ollama (local)
+  - OpenAI
+  - DeepSeek
+  - Hugging Face
+- Automatic LLM fallback (comma-separated priority)
+- Lightweight RAG using a domain knowledge file
+- Secure API key management via `.env`
+
+---
+
+## Installation
 
 ```bash
-python main.py error.log --llm ollama
-python main.py error.log --llm deepseek
+pip install -r requirements.txt
+
