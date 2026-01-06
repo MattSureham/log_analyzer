@@ -1,0 +1,17 @@
+
+---
+
+## 1️⃣ `knowledge.txt` (example content)
+
+```txt
+ERROR: database connection refused
+Cause: Database service is down or unreachable.
+Fix: Check database status, network connectivity, and credentials.
+
+ERROR: out of memory
+Cause: Application exceeds memory limits.
+Fix: Increase memory allocation or optimize memory usage.
+
+ERROR: permission denied
+Cause: Insufficient file or resource permissions.
+Fix: Check user roles and file permissions.
