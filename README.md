@@ -17,6 +17,10 @@ support for multiple backends, fallback, and lightweight retrieval-augmented gen
 - Lightweight RAG using a domain knowledge file
 - Secure API key management via `.env`
 
+- Semantic RAG with vector database
+- LLM fallback support
+- Secure API key handling
+
 ---
 
 ## Installation
@@ -24,3 +28,9 @@ support for multiple backends, fallback, and lightweight retrieval-augmented gen
 ```bash
 pip install -r requirements.txt
 
+
+
+## Usage
+
+```bash
+python main.py logs/error.log
